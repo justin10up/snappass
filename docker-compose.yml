@@ -1,0 +1,18 @@
+version: '2'
+services:
+  snappass:
+    image: jde5011/snappass:latest
+    environment:
+      REDIS_HOST: redis
+      NO_SSL: 'False'
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.sidekicks: redis
+  redis:
+    image: redis:latest
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always 
