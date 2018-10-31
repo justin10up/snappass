@@ -1,1 +1,16 @@
+stages:
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: snappass
+      registry: 127.0.0.1:34155
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+    env:
+      NO_SSL: "true"
+      REDIS_HOST: redis
 timeout: 60
