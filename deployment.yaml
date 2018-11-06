@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: snappass
+  name: snappass2
   labels:
-    app: snappass
+    app: snappass2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: snappass
+      app: snappass2
   template:
     metadata:
       labels:
-        app: snappass
+        app: snappass2
     spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
@@ -22,5 +22,5 @@ spec:
           value: "True"
         - name: REDIS_HOST
           value: redis
-        name: snappass
+        name: snappass2
         image: snappass:latestzs
