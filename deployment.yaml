@@ -12,8 +12,8 @@ metadata:
   labels:
     cattle.io/creator: norman
     workload.user.cattle.io/workloadselector: deployment-snapass-snappass
-  name: snappass
-  namespace: snapass2
+  name: snappass2
+  namespace: snapass
   resourceVersion: "710070"
   selfLink: /apis/apps/v1beta2/namespaces/snapass/deployments/snappass
   uid: 92cb3d3d-dd33-11e8-b6e5-0a5afa06bfae
