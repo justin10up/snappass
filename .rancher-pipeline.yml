@@ -10,7 +10,4 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-    env:
-      NO_SSL: "true"
-      REDIS_HOST: redis
-timeout: 60
+
