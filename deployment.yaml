@@ -27,4 +27,4 @@ spec:
         - name: REDIS_HOST
           value: redis
         name: snappass2
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: ${CICD_IMAGE}:latest
