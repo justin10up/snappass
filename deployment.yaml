@@ -1,7 +1,11 @@
 apiVersion: apps/v1
+kind: Namespace
+metadata:
+  name: prod
 kind: Deployment
 metadata:
   name: snappass2
+  namespace: prod
   labels:
     app: snappass2
 spec:
