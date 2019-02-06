@@ -6,8 +6,3 @@ stages:
       buildContext: .
       tag: snappass:latest
       registry: 127.0.0.1:34155
-- name: Deploy
-  steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
-
